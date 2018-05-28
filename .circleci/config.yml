@@ -8,12 +8,12 @@ jobs:
       - run: cat README.md
       - run: which gcloud
 
-workflows:
-    version: 2
-    test_and_deploy:
-        jobs:
-            - product:
-                context: GCR
-                filters:
-                    branches:
-                        only: master
+# workflows:
+#     version: 2
+#     test_and_deploy:
+#         jobs:
+#             - product:
+#                 context: GCR
+#                 filters:
+#                     branches:
+#                         only: master
