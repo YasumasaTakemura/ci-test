@@ -6,3 +6,4 @@ jobs:
     steps:
       - checkout
       - run: cat README.md
+      - run: which gcloud
