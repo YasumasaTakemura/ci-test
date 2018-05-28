@@ -1,6 +1,7 @@
 version: 2
 jobs:
   production:
+    machine: true
   # build:
     # docker:
     #   - image: circleci/python:3.6.2-stretch-browsers
