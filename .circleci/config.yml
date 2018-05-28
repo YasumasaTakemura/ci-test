@@ -1,10 +1,8 @@
 version: 2
 jobs:
-  production:
-    machine: true
-  # build:
-    # docker:
-    #   - image: circleci/python:3.6.2-stretch-browsers
+  build:
+    docker:
+      - image: google/cloud-sdk:latest
     steps:
       - checkout
       - run: cat README.md
