@@ -5,10 +5,10 @@ jobs:
       - image: google/cloud-sdk:latest
     steps:
       - checkout
-      - run: cat README.md
+      - run: cat ./README.md
       - run: which gcloud
       - run: ls -la 
-      - run: cat $HOME/env/.env
+      # - run: cat $HOME/env/.env
 
 # workflows:
 #     version: 2
