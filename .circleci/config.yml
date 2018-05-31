@@ -9,6 +9,7 @@ jobs:
       - run: which gcloud
       - run: ls -la 
       - run: cat ./env/.env
+      - run: echo $testenv
 
 # workflows:
 #     version: 2
