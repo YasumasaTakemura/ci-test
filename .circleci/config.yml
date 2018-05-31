@@ -7,8 +7,8 @@ jobs:
       - checkout
       - run: ls -la 
       - run: echo $ACCT_AUTH | base64 -d > ${HOME}/gcloud-service-key.json
-      - run: sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-      - run: sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_ID
+      - run: /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+      - run: /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_ID
       - run: gcloud compute instance-groups managed list --zones us-east1-b --quiet
 
 # workflows:
