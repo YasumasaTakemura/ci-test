@@ -5,11 +5,7 @@ jobs:
       - image: google/cloud-sdk:latest
     steps:
       - checkout
-      - run: cat ./README.md
-      - run: which gcloud
       - run: ls -la 
-      - run: cat ./env/.env
-      - run: echo $testenv
       - run: gcloud compute instance-groups managed list --zones us-east1-b --quiet
 
 # workflows:
