@@ -11,8 +11,8 @@ jobs:
       # - run: gcloud compute instance-groups managed list --zones us-east1-b
       - run: cat .env
       # - run: gcloud kms encrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=.env
-      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=.env
-      - run: cat .env.enc
+      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=env/.env.enc --plaintext-file=env/.env
+      - run: cat env/.enc
 
 # workflows:
 #     version: 2
