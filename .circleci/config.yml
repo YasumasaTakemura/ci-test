@@ -8,8 +8,11 @@ jobs:
       - run: echo $ACCT_AUTH | base64 -d > ${HOME}/gcloud-service-key.json
       - run: gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
       - run: gcloud config set project $PROJECT_ID
-      - run: gcloud compute instance-groups managed list --zones us-east1-b --
-      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=env
+      # - run: gcloud compute instance-groups managed list --zones us-east1-b
+      - run: cat .env
+      - run: gcloud kms encrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=.env
+      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=.env
+      - run: cat .env.enc
 
 # workflows:
 #     version: 2
