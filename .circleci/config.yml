@@ -9,7 +9,7 @@ jobs:
       - run: gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
       - run: gcloud config set project $PROJECT_ID
       - run: gcloud compute instance-groups managed list --zones us-east1-b --
-      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=env.env
+      - run: gcloud kms decrypt --location=global --keyring=my-key-ring --key=my-key --ciphertext-file=.env.enc --plaintext-file=env
 
 # workflows:
 #     version: 2
